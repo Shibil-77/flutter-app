@@ -31,27 +31,29 @@ class MyWidget extends StatelessWidget {
                   bottom: Radius.circular(10))),
           elevation: 60,
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          
-          children: [
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.purple,
-              
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.yellow,
-            ),
-          ],
+        body: Center(
+          child: Column(
+            children: [
+              Container(
+                width: 500,
+                height: 200,
+                color: Colors.white,
+                child: Image.asset(
+                  'images/test.png',
+                  fit: BoxFit.fitWidth,
+                ),
+              ),
+              Container(
+                width: 500,
+                height: 200,
+                color: Colors.white,
+                child: Image.network(
+                  'https://static.toiimg.com/thumb/width-600,height-400,msid-93874519.cms',
+                  fit: BoxFit.fitWidth,
+                ),
+              )
+            ],
+          ),
         ));
   }
 }
